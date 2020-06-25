@@ -1,0 +1,8 @@
+<launch>
+    <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+
+    <!-- <node pkg="make_scan" name="testPub" type="testPub.py" output="screen" /> -->
+    <node pkg="make_scan" name="artLoc" type="artLoc.py" output="screen" />
+
+    <node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="0 0 -0.7071378119 0 1.5708 0 /base_link /laser 10" />
+</launch>

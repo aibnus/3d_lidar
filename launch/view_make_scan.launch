@@ -1,0 +1,5 @@
+<launch>
+    <include file="$(find make_scan)/launch/make_scan.launch" />
+
+    <node pkg="rviz" name="rviz" type="rviz" args="-d $(find make_scan)/rviz/make_scan.rviz" />
+</launch>
